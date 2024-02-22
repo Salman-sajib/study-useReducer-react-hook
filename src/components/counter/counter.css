@@ -1,5 +1,5 @@
 .count-value {
-  color: hsl(128, 100%, 30%);
+  color: hsl(128, 100%, 40%);
   font-size: 5rem;
 }
 
@@ -10,10 +10,10 @@
 }
 
 .buttons > button {
-  background-color: hsl(128, 100%, 30%);
+  background-color: hsl(223, 96%, 56%);
   transition: background-color 200ms ease-in-out;
 }
 
 .buttons > button:hover {
-  background-color: hsl(128, 100%, 25%);
+  background-color: hsl(223, 96%, 46%);
 }
