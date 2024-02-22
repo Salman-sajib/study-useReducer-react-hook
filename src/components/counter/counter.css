@@ -1,0 +1,19 @@
+.count-value {
+  color: hsl(128, 100%, 30%);
+  font-size: 5rem;
+}
+
+.buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.buttons > button {
+  background-color: hsl(128, 100%, 30%);
+  transition: background-color 200ms ease-in-out;
+}
+
+.buttons > button:hover {
+  background-color: hsl(128, 100%, 25%);
+}

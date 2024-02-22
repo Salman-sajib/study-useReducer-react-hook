@@ -1,22 +1,11 @@
-import { useState } from 'react';
 import './App.css';
+import Counter from './components/counter/Counter';
 
 function App() {
-  const [count, setCount] = useState(0);
-
-  function increment() {
-    setCount((prevCount) => prevCount + 1);
-  }
-
-  function decrement() {
-    setCount((prevCount) => prevCount - 1);
-  }
-
   return (
     <>
-      <button onClick={decrement}>-</button>
-      <span> {count} </span>
-      <button onClick={increment}>+</button>
+      <h1 style={{ color: 'hsl(128, 100%, 30%)' }}>Counter</h1>
+      <Counter />
     </>
   );
 }
