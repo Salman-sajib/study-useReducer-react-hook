@@ -1,0 +1,22 @@
+.todo-container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-block: 0.3rem;
+}
+
+.todo-container > span {
+  color: hsl(128, 100%, 40%);
+  font-size: 1.3rem;
+}
+
+.todo-container > button {
+  background-color: hsl(240, 100%, 54%);
+  transition: background-color 200ms ease-in-out;
+}
+
+.todo-container > button:hover {
+  background-color: hsl(240, 100%, 44%);
+}

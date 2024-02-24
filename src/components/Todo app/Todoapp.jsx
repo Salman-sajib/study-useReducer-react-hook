@@ -2,6 +2,7 @@ import { useReducer, useState } from 'react';
 import { nanoid } from 'nanoid';
 import { ACTIONS } from './Actions';
 import Todo from './Todo';
+import './todoapp.css';
 
 function reducer(todos, action) {
   switch (action.type) {
@@ -38,7 +39,7 @@ function Todoapp() {
   // console.log(todos);
 
   return (
-    <>
+    <div>
       <form onSubmit={handleSubmit}>
         <input
           type='text'
@@ -50,7 +51,7 @@ function Todoapp() {
       {todos.map((todo) => (
         <Todo key={todo.id} todo={todo} dispatch={dispatch} />
       ))}
-    </>
+    </div>
   );
 }
 

@@ -1,10 +1,13 @@
 /* eslint-disable react/prop-types */
 import { ACTIONS } from './Actions';
+import './todo.css';
 
 function Todo({ todo, dispatch }) {
   return (
-    <div>
-      <span style={{ color: todo.completed ? '#AAA' : '#000' }}>
+    <div className='todo-container'>
+      <span
+        style={{ textDecoration: todo.completed ? 'none' : 'line-through' }}
+      >
         {' '}
         {todo.name}{' '}
       </span>
@@ -13,7 +16,7 @@ function Todo({ todo, dispatch }) {
           dispatch({ type: ACTIONS.TOGGLE_TODO, payload: { id: todo.id } })
         }
       >
-        Toggle
+        Complete
       </button>
       <button
         onClick={() =>
