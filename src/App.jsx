@@ -4,13 +4,13 @@ import Counter from './components/counter/Counter';
 
 function App() {
   return (
-    <>
-      <h1 style={{ color: 'hsl(223, 96%, 56%)' }}>Counter</h1>
+    <div className='App'>
+      <h1 style={{ color: 'hsl(180, 100%, 92%)' }}>Counter</h1>
       <Counter />
-
+      <hr />
       <h1>ToDo App</h1>
       <Todoapp />
-    </>
+    </div>
   );
 }
 

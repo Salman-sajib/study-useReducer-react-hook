@@ -10,10 +10,11 @@
 }
 
 .buttons > button {
-  background-color: hsl(223, 96%, 56%);
+  background-color: hsl(240, 100%, 54%);
   transition: background-color 200ms ease-in-out;
 }
 
 .buttons > button:hover {
-  background-color: hsl(223, 96%, 46%);
+  background-color: hsl(240, 100%, 44%);
+  color: hsl(180, 100%, 92%);
 }

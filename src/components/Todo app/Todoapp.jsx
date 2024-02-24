@@ -1,8 +1,11 @@
 import { useReducer, useState } from 'react';
 import { nanoid } from 'nanoid';
 
+import Todo from './Todo';
+
 const ACTIONS = {
   ADD_TODO: 'add-todo',
+  TOGGLE_TODO: 'toggle-todo',
 };
 
 function reducer(todos, action) {
@@ -37,6 +40,9 @@ function Todoapp() {
           onChange={(e) => setName(e.target.value)}
         />
       </form>
+      {todos.map((todo) => (
+        <Todo key={todo.id} todo={todo} />
+      ))}
     </>
   );
 }
