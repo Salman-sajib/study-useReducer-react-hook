@@ -1,13 +1,7 @@
-/* eslint-disable react-refresh/only-export-components */
 import { useReducer, useState } from 'react';
 import { nanoid } from 'nanoid';
-
+import { ACTIONS } from './Actions';
 import Todo from './Todo';
-
-export const ACTIONS = {
-  ADD_TODO: 'add-todo',
-  TOGGLE_TODO: 'toggle-todo',
-};
 
 function reducer(todos, action) {
   switch (action.type) {
@@ -20,6 +14,10 @@ function reducer(todos, action) {
         }
         return todo;
       });
+    case ACTIONS.DELETE_TODO:
+      return todos.filter((todo) => todo.id !== action.payload.id);
+    default:
+      return todos;
   }
 }
 
@@ -47,6 +45,7 @@ function Todoapp() {
           value={name}
           onChange={(e) => setName(e.target.value)}
         />
+        <button type='submit'>Add</button>
       </form>
       {todos.map((todo) => (
         <Todo key={todo.id} todo={todo} dispatch={dispatch} />

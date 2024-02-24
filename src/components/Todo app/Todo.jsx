@@ -1,5 +1,5 @@
-import React from 'react';
-import { ACTIONS } from './Todoapp';
+/* eslint-disable react/prop-types */
+import { ACTIONS } from './Actions';
 
 function Todo({ todo, dispatch }) {
   return (
@@ -15,7 +15,13 @@ function Todo({ todo, dispatch }) {
       >
         Toggle
       </button>
-      <button>Delete</button>
+      <button
+        onClick={() =>
+          dispatch({ type: ACTIONS.DELETE_TODO, payload: { id: todo.id } })
+        }
+      >
+        Delete
+      </button>
     </div>
   );
 }
